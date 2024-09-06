@@ -1,0 +1,2 @@
+rails new landing_page_app
+cd landing_page_app
