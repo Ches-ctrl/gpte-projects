@@ -1,1 +1,0 @@
-rails new chatgpt_clone --skip-test --database=postgresql
