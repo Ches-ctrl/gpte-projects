@@ -1,0 +1,20 @@
+<h1>Chat with GPT Clone</h1>
+
+<div id="chat-box">
+  <% @messages.each do |message| %>
+    <% if message.is_user_message %>
+      <div class="user-message"><%= message.content %></div>
+    <% else %>
+      <div class="ai-message"><%= message.content %></div>
+    <% end %>
+  <% end %>
+</div>
+
+<%= form_with(url: messages_path, method: :post, local: true) do |form| %>
+  <div>
+    <%= form.text_area :content %>
+  </div>
+  <div>
+    <%= form.submit "Send" %>
+  </div>
+<% end %>
